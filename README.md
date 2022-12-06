@@ -64,23 +64,23 @@ How to run this project:
     - Method:GET
 
 5. Get Inquiry List (Sign In Required):
-    1. Endpoint:/inquirylist
-    2. Method:GET
+    - Endpoint:/inquirylist
+    - Method:GET
 
 6. Get Transaction History (Sign In Required):
-    1. Endpoint: /history
-    2. Method:GET
+    - Endpoint: /history
+    - Method:GET
 
 7. Post Inquiry Confirmation (Sign In Required):
-    1. Endpoint: /inquiry
-    2. Method:POST
-    3. Body:{
+    - Endpoint: /inquiry
+    - Method:POST
+    - Body:{
                 "inquiry_id":4
             }
 
 8. Top-up Account Balance (Sign In Required):
-    1. Endpoint: /balance
-    2. Method:PUT
-    3. Body:{
+    - Endpoint: /balance
+    - Method:PUT
+    - Body:{
                 "top_up":1000000
             }
