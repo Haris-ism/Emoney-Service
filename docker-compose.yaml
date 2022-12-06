@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  emoney_db:
+    image: postgres:14
+    container_name: emoney_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5433:5432'
+  emoney_backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile_Backend
+    environment:
+      - DB=host=emoney_db user=postgres password=postgres dbname=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
+    depends_on:
+      - emoney_db
+    ports:
+      - '8888:8888'
+    volumes:
+      - './:/app'
+   
